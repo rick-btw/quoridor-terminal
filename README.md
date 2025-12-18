@@ -142,11 +142,9 @@ Features include authentication, persistent leaderboard, undo, and a pathfinding
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/rick-btw/quoridor-terminal.git
+cd quoridor-terminal
 ```
-
-*(Replace `<your-username>` and `<your-repo-name>` with your actual GitHub values.)*
 
 ---
 
