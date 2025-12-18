@@ -75,26 +75,35 @@ class UI:
 
     def render_banner(self) -> None:
         self.clear_screen()
+        # Top border in Bold Cyan (same as header)
         top = (
-            f"{Theme.BORDER} ╔══════════════════════════════════════════════════════════╗{Theme.RESET}"
+            f"{Theme.HEADER} ╔══════════════════════════════════════════════════════════════════════╗{Theme.RESET}"
         )
+        # Main banner lines (text and borders) in Bold Cyan
         lines = [
-            " ║  ██████╗ ██╗   ██╗ ██████╗ ██████╗ ██╗██████╗  ██████╗   ║",
-            " ║ ██╔═══██╗██║   ██║██╔═══██╗██╔══██╗██║██╔══██╗██╔═══██╗  ║",
-            " ║ ██║   ██║██║   ██║██║   ██║██████╔╝██║██║  ██║██║   ██║  ║",
-            " ║ ██║▄▄ ██║██║   ██║██║   ██║██╔══██╗██║██║  ██║██║   ██║  ║",
-            " ║ ╚██████╔╝╚██████╔╝╚██████╔╝██║  ██║██║██████╔╝╚██████╔╝  ║",
-            " ║  ╚══▀▀═╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝  ╚═════╝   ║",
-            " ╚═╗______________________________________________________  ║",
-            "   ╚══════════════════════════════════════════════════════╝ ║",
+            " ║  ██████╗ ██╗   ██╗ ██████╗ ██████╗ ██╗██████╗  ██████╗ ██████╗       ║",
+            " ║ ██╔═══██╗██║   ██║██╔═══██╗██╔══██╗██║██╔══██╗██╔═══██╗██╔══██╗      ║",
+            " ║ ██║   ██║██║   ██║██║   ██║██████╔╝██║██║  ██║██║   ██║██████╔╝      ║",
+            " ║ ██║▄▄ ██║██║   ██║██║   ██║██╔══██╗██║██║  ██║██║   ██║██╔══██╗      ║",
+            " ║ ╚██████╔╝╚██████╔╝╚██████╔╝██║  ██║██║██████╔╝╚██████╔╝██║  ██║      ║",
+            " ║  ╚══▀▀═╝  ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝      ║",
         ]
+        # Underscore separator line in Dim Gray
+        separator_line = " ╚═╗__________________________________________________________________  ║"
+        # Bottom border line in Dim Gray
+        bottom_border = "   ╚══════════════════════════════════════════════════════════════════╝ ║"
+        # Shadow line in Dim Gray (extends slightly to the right)
+        shadow_line = "    ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀"
+        
         print(top)
-        for line in lines[:-1]:
+        # Print main text lines in Bold Cyan
+        for line in lines:
             print(f"{Theme.HEADER}{line}{Theme.RESET}")
-        print(f"{Theme.SHADOW}{lines[-1]}{Theme.RESET}")
-        shadow_line = (
-            "    " + "▀" * 58  # width tuned to roughly match banner width
-        )
+        # Print separator line in Dim Gray
+        print(f"{Theme.SHADOW}{separator_line}{Theme.RESET}")
+        # Print bottom border in Dim Gray
+        print(f"{Theme.SHADOW}{bottom_border}{Theme.RESET}")
+        # Print shadow line in Dim Gray
         print(f"{Theme.SHADOW}{shadow_line}{Theme.RESET}\n")
 
     def print_title(self, text: str) -> None:
