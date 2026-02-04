@@ -7,7 +7,6 @@
 A fully-playable, terminal-based implementation of the board game **Quoridor**, built with **modular Object-Oriented Python** and a **themed CLI UI**.  
 Features include authentication, persistent leaderboard, undo, and a pathfinding-safe wall system on a 9×9 board.
 
-by
 
 ---
 
